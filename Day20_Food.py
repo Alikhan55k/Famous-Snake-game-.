@@ -1,0 +1,17 @@
+from turtle import Turtle
+import random
+
+class Food(Turtle):
+    def __init__(self):
+        super().__init__()
+        self.shape("circle")
+        self.color("blue")
+        self.shapesize(0.5)
+        self.penup()
+        self.refresh()
+
+    def refresh(self):
+        first_position = random.randint(-280, 280)
+        second_position = random.randint(-280, 280)
+        self.goto(first_position, second_position)
+
